@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atul Anand Singh | DevSecOps & Cloud Security Engineer</title>
+  <meta name="description" content="Portfolio of Atul Anand Singh - DevSecOps Engineer, Cloud Security Specialist, CI/CD and Kubernetes Security Architect.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            cyber: {
+              dark: '#0a0f1d',
+              card: '#111827',
+              border: '#1f293d',
+              accent: '#10b981',
+              cyan: '#06b6d4',
+              neon: '#00f0ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #070b14;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .grid-bg {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-[#070b14] text-slate-200 antialiased selection:bg-emerald-500/30 selection:text-emerald-300">
+
+  <!-- Background Grids & Ambient Glows -->
+  <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed bottom-1/3 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#070b14]/85 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 p-0.5 shadow-md">
+          <div class="w-full h-full bg-[#0a0f1d] rounded-[7px] flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-emerald-400 group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div>
+          <span class="font-bold text-lg tracking-tight text-white block">Atul Anand Singh</span>
+          <span class="text-xs text-emerald-400 font-mono flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> DevSecOps Specialist
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+        <a href="#pipeline" class="hover:text-emerald-400 transition-colors">Security Pipeline</a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors">Skills & Stack</a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors">Projects</a>
+        <a href="#certs" class="hover:text-emerald-400 transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/singhatulanand33" target="_blank" rel="noopener noreferrer" 
+           class="px-3.5 py-1.5 text-xs font-mono rounded-lg border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-slate-200 flex items-center gap-2 hover:border-emerald-500/50 transition-all">
+          <i class="fa-brands fa-github text-base"></i>
+          <span>singhatulanand33</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-28">
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-6 sm:pt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono font-medium">
+          <i class="fa-solid fa-lock text-xs"></i> Shift-Left Security & Continuous Cloud Compliance
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          Securing Code, <br />
+          <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Automating Pipelines,
+          </span> <br />
+          Hardening Cloud.
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          Hi, I am <strong class="text-white">Atul Anand Singh</strong>. I architect resilient 
+          <strong class="text-emerald-400">DevSecOps</strong> ecosystems that seamlessly embed security 
+          into the developer lifecycle. From automated SAST/DAST gating to Zero-Trust Kubernetes runtime security, 
+          I ensure speed without compromising defense.
+        </p>
+
+        <!-- Call to actions -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3 rounded-lg font-semibold text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all flex items-center gap-2">
+            <i class="fa-solid fa-diagram-project"></i> View Security Projects
+          </a>
+          <a href="#pipeline" class="px-6 py-3 rounded-lg font-semibold text-sm border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 hover:border-slate-600 transition-all flex items-center gap-2">
+            <i class="fa-solid fa-shield-virus text-emerald-400"></i> Explore Pipeline
+          </a>
+          <a href="https://github.com/singhatulanand33/devsecops-portfolio" target="_blank" class="px-4 py-3 rounded-lg text-sm border border-slate-800 bg-slate-900/40 hover:text-emerald-400 transition-colors">
+            <i class="fa-brands fa-github text-lg"></i>
+          </a>
+        </div>
+
+        <!-- Metric badges -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
+          <div>
+            <div class="text-2xl font-bold font-mono text-emerald-400">100%</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">Shift-Left Automated</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold font-mono text-cyan-400">Zero</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">Secret Leak Tolerance</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold font-mono text-blue-400">CIS & OPA</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium">Hardened Clusters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Simulated Security Terminal -->
+      <div class="lg:col-span-5">
+        <div class="rounded-xl border border-slate-800 bg-[#0d1322] shadow-2xl overflow-hidden font-mono text-xs">
+          <!-- Terminal Titlebar -->
+          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+              <span class="ml-2 text-slate-400 text-xs">devsecops-pipeline.sh</span>
+            </div>
+            <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">STATUS: HEALTHY</span>
+          </div>
+
+          <!-- Terminal Content -->
+          <div class="p-5 space-y-3 leading-relaxed text-slate-300">
+            <div class="text-slate-500"># Initializing Automated Security Gates...</div>
+            <div class="flex items-center gap-2 text-cyan-400">
+              <span>$</span>
+              <span>git commit -m "feat(api): harden ingress TLS"</span>
+            </div>
+            <div class="pl-3 border-l-2 border-slate-800 space-y-2 pt-1 text-[11px]">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">[1/5] Gitleaks Secret Audit:</span>
+                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> 0 LEAKS DETECTED</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">[2/5] SonarQube SAST Gate:</span>
+                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> QUALITY GATE PASSED</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">[3/5] Trivy Vulnerability Scan:</span>
+                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> 0 CRITICAL / 0 HIGH</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">[4/5] Checkov IaC Compliance:</span>
+                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> CIS AWS PASSED</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">[5/5] ArgoCD GitOps Sync:</span>
+                <span class="text-cyan-400 font-bold"><i class="fa-solid fa-rotate"></i> SYNCHRONIZED</span>
+              </div>
+            </div>
+            <div class="pt-2 text-emerald-400 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+              <span>Pipeline deployed securely to AWS EKS.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVSECOPS PIPELINE VISUALIZER -->
+    <section id="pipeline" class="space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">Continuous Defense Cycle</h2>
+        <h3 class="text-3xl font-extrabold text-white">Automated DevSecOps Pipeline Architecture</h3>
+        <p class="text-slate-400 text-sm">
+          Security is built directly into every stage of development, eliminating post-release vulnerabilities and compliance drift.
+        </p>
+      </div>
+
+      <!-- Pipeline Stage Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-code text-lg"></i>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 uppercase font-semibold">Phase 01</span>
+          <h4 class="text-base font-bold text-white mt-1 mb-2">Pre-Commit & Code</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Stops secrets and credentials from ever reaching source control.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Gitleaks</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Pre-commit</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Git Hooks</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
+          </div>
+          <span class="text-xs font-mono text-cyan-400 uppercase font-semibold">Phase 02</span>
+          <h4 class="text-base font-bold text-white mt-1 mb-2">SAST & SCA Scanning</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Detects code flaws, security hotspots, and vulnerable open-source dependencies.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">SonarQube</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Snyk</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Trivy SCA</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-blue-500/50 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-docker text-lg"></i>
+          </div>
+          <span class="text-xs font-mono text-blue-400 uppercase font-semibold">Phase 03</span>
+          <h4 class="text-base font-bold text-white mt-1 mb-2">Container & IaC Guard</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Hardens Dockerfiles, scans OS base images, and lints Terraform configs.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Docker Scout</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Checkov</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">tfsec</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-purple-500/50 transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-server text-lg"></i>
+          </div>
+          <span class="text-xs font-mono text-purple-400 uppercase font-semibold">Phase 04</span>
+          <h4 class="text-base font-bold text-white mt-1 mb-2">GitOps & Runtime Def</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Zero-drift deployments to K8s with real-time threat detection and DAST.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">ArgoCD</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Falco</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">OWASP ZAP</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS & STACK -->
+    <section id="skills" class="space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">Technical Arsenal</h2>
+        <h3 class="text-3xl font-extrabold text-white">Tools, Frameworks & Cloud Technologies</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Cloud & Infrastructure -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-aws text-2xl text-amber-400"></i>
+            <h4 class="font-bold text-white text-base">Cloud & Infrastructure</h4>
+          </div>
+          <p class="text-xs text-slate-400">Production multi-tier architectures, zero-trust VPC, IAM security, and automated cloud provisioning.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">AWS (EKS, IAM, VPC, S3)</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Terraform</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Ansible</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Linux Hardening</span>
+          </div>
+        </div>
+
+        <!-- Containers & Orchestration -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-dharmachakra text-2xl text-blue-400"></i>
+            <h4 class="font-bold text-white text-base">Containers & Kubernetes</h4>
+          </div>
+          <p class="text-xs text-slate-400">Hardened cluster deployments, network isolation, admission controllers, and GitOps sync.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Kubernetes (K8s)</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Docker</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Helm Charts</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">ArgoCD</span>
+          </div>
+        </div>
+
+        <!-- Shift-Left Security & Testing -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-shield-halved text-2xl text-emerald-400"></i>
+            <h4 class="font-bold text-white text-base">Security, SAST & DAST</h4>
+          </div>
+          <p class="text-xs text-slate-400">Automated vulnerability discovery across source code, container images, and live endpoints.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">SonarQube</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Trivy</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">OWASP ZAP</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Snyk</span>
+          </div>
+        </div>
+
+        <!-- Policy, Compliance & Secrets -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-key text-2xl text-yellow-400"></i>
+            <h4 class="font-bold text-white text-base">Secrets & Policy as Code</h4>
+          </div>
+          <p class="text-xs text-slate-400">Zero-leakage secret management, dynamic credentials, and declarative compliance policies.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">HashiCorp Vault</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Checkov</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">OPA Gatekeeper</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Gitleaks</span>
+          </div>
+        </div>
+
+        <!-- CI/CD Pipelines -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-code-merge text-2xl text-purple-400"></i>
+            <h4 class="font-bold text-white text-base">CI/CD & Automation</h4>
+          </div>
+          <p class="text-xs text-slate-400">Multi-branch automated deployment pipelines with mandatory quality and security checkpoints.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">GitHub Actions</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Jenkins</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">GitLab CI</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Bash / Python</span>
+          </div>
+        </div>
+
+        <!-- Monitoring & Runtime Defense -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-line text-2xl text-red-400"></i>
+            <h4 class="font-bold text-white text-base">Runtime Threat & Observability</h4>
+          </div>
+          <p class="text-xs text-slate-400">Kernel-level runtime auditing, behavioral anomaly detection, and automated alerting.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Falco</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Prometheus</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Grafana</span>
+            <span class="px-3 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">CloudWatch</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">Real-World Deployments</h2>
+        <h3 class="text-3xl font-extrabold text-white">Featured DevSecOps Projects</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-all flex flex-col justify-between p-6 space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">End-to-End Pipeline</span>
+              <a href="https://github.com/singhatulanand33/devsecops-portfolio" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+            </div>
+            <h4 class="text-xl font-bold text-white">Automated DevSecOps Pipeline on AWS EKS</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Designed a multi-stage GitHub Actions pipeline incorporating automated pre-commit secret detection, SonarQube SAST, Trivy container image scanning, and ArgoCD GitOps deployment to AWS EKS with OWASP ZAP dynamic analysis.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">GitHub Actions</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">AWS EKS</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">SonarQube</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Trivy</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">ArgoCD</span>
+            </div>
+            <a href="https://github.com/singhatulanand33/devsecops-portfolio" target="_blank" class="text-xs font-semibold text-emerald-400 hover:underline flex items-center gap-1.5">
+              <span>Explore Architecture & Code</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">Zero-Trust Kubernetes</span>
+              <a href="https://github.com/singhatulanand33" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+            </div>
+            <h4 class="text-xl font-bold text-white">Kubernetes Policy Enforcement & Falco Runtime Defense</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Implemented Zero-Trust security across K8s clusters using OPA Gatekeeper for admission control, Calico for strict namespace network segmentation, and Falco for runtime kernel anomaly alerting to Slack.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Kubernetes</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">OPA Gatekeeper</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Falco</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Calico CNI</span>
+            </div>
+            <a href="https://github.com/singhatulanand33" target="_blank" class="text-xs font-semibold text-cyan-400 hover:underline flex items-center gap-1.5">
+              <span>View Repository</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all flex flex-col justify-between p-6 space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30">IaC Compliance</span>
+              <a href="https://github.com/singhatulanand33" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+            </div>
+            <h4 class="text-xl font-bold text-white">Secure Multi-Region AWS Infrastructure with Terraform</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Engineered modular Terraform modules for AWS production environments adhering strictly to CIS Benchmarks. Integrated automated PR linting via Checkov and tfsec to halt misconfigured security groups or unencrypted S3 buckets.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Terraform</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Checkov</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">AWS</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">tfsec</span>
+            </div>
+            <a href="https://github.com/singhatulanand33" target="_blank" class="text-xs font-semibold text-blue-400 hover:underline flex items-center gap-1.5">
+              <span>View Repository</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="border border-slate-800 bg-slate-900/50 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all flex flex-col justify-between p-6 space-y-6">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">Zero Secrets Leakage</span>
+              <a href="https://github.com/singhatulanand33" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+            </div>
+            <h4 class="text-xl font-bold text-white">Enterprise Dynamic Secret Rotation with Vault</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Eliminated static application passwords by integrating HashiCorp Vault with Kubernetes sidecar injectors. Enforced dynamic, time-limited database access and automatic key rotation via AWS KMS.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">HashiCorp Vault</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Kubernetes Sidecar</span>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">AWS KMS</span>
+            </div>
+            <a href="https://github.com/singhatulanand33" target="_blank" class="text-xs font-semibold text-yellow-400 hover:underline flex items-center gap-1.5">
+              <span>View Repository</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & LEARNING -->
+    <section id="certs" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">Qualifications</h2>
+        <h3 class="text-3xl font-extrabold text-white">Certifications & Accreditations</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 text-center space-y-3 hover:border-amber-500/50 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl">
+            <i class="fa-brands fa-aws"></i>
+          </div>
+          <h4 class="font-bold text-white">AWS Certified Solutions Architect</h4>
+          <p class="text-xs text-slate-400">Scalable cloud systems design, high availability & AWS security best practices.</p>
+        </div>
+
+        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 text-center space-y-3 hover:border-blue-500/50 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-2xl">
+            <i class="fa-solid fa-dharmachakra"></i>
+          </div>
+          <h4 class="font-bold text-white">Kubernetes Security (CKS / CKA)</h4>
+          <p class="text-xs text-slate-400">Cluster hardening, container vulnerability mitigation & runtime threat analysis.</p>
+        </div>
+
+        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 text-center space-y-3 hover:border-purple-500/50 transition-all">
+          <div class="w-14 h-14 mx-auto rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 text-2xl">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <h4 class="font-bold text-white">HashiCorp Certified Terraform</h4>
+          <p class="text-xs text-slate-400">Infrastructure as Code automation, modular architecture & state management.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / GET IN TOUCH -->
+    <section id="contact" class="border border-slate-800 bg-gradient-to-b from-slate-900/80 to-[#070b14] rounded-2xl p-8 sm:p-12 text-center space-y-6">
+      <div class="max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold">Let's Collaborate</span>
+        <h3 class="text-3xl font-extrabold text-white">Ready to Secure and Scale Your Cloud Infrastructure?</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Whether you are looking for a full-time DevSecOps Engineer, need help hardening your Kubernetes clusters, or want to automate end-to-end security in your CI/CD pipeline, feel free to reach out.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
+        <a href="https://github.com/singhatulanand33" target="_blank" class="px-5 py-3 rounded-lg font-medium text-xs font-mono bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 flex items-center gap-2 transition-all">
+          <i class="fa-brands fa-github text-base"></i> GitHub: @singhatulanand33
+        </a>
+        <a href="https://linkedin.com/in/" target="_blank" class="px-5 py-3 rounded-lg font-medium text-xs font-mono bg-blue-600 hover:bg-blue-500 text-white flex items-center gap-2 transition-all">
+          <i class="fa-brands fa-linkedin text-base"></i> Connect on LinkedIn
+        </a>
+        <a href="mailto:singh.atulanand33@gmail.com" class="px-5 py-3 rounded-lg font-medium text-xs font-mono bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-envelope text-base"></i> singh.atulanand33@gmail.com
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Atul Anand Singh (singhatulanand33). All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">Top</a>
+        <span>•</span>
+        <a href="https://github.com/singhatulanand33/devsecops-portfolio" target="_blank" class="hover:text-emerald-400 transition-colors">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
